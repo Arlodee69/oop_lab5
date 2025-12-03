@@ -1,0 +1,5 @@
+/home/anton/code/homework_ooplab5/build/CMakeFiles/tests.dir
+/home/anton/code/homework_ooplab5/build/CMakeFiles/check.dir
+/home/anton/code/homework_ooplab5/build/CMakeFiles/test.dir
+/home/anton/code/homework_ooplab5/build/CMakeFiles/edit_cache.dir
+/home/anton/code/homework_ooplab5/build/CMakeFiles/rebuild_cache.dir
