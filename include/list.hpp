@@ -80,6 +80,39 @@ public:
     }
 
     size_t size() const { return sz; }
+    void pop_front() {
+        if (!head) return;
+
+        Node* old = head;
+        head = head->next;
+
+        if (head)
+            head->prev = nullptr;
+        else
+            tail = nullptr;
+
+        alloc.destroy(old);
+        alloc.deallocate(old, 1);
+        sz--;
+    }
+
+    void pop_back() {
+        if (!tail) return;
+
+        Node* old = tail;
+        tail = tail->prev;
+
+        if (tail)
+            tail->next = nullptr;
+        else
+            head = nullptr;
+
+        alloc.destroy(old);
+        alloc.deallocate(old, 1);
+        sz--;
+    }
+    
+    bool is_empty() const { return sz == 0; }
 
     void clear() {
         Node* cur = head;
